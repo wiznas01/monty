@@ -32,7 +32,7 @@ void free_nodes(void)
  *
  * @head: Pointer to the head of the linked lists
  */
-void add_to_queue(stack_t **head, unsigned int)
+void add_to_queue(stack_t **head)
 {
 	stack_t *new_node = malloc(sizeof(stack_t));
 	stack_t *last = *head;
@@ -41,7 +41,6 @@ void add_to_queue(stack_t **head, unsigned int)
 	{
 		return;
 	}
-
 	new_node->next = NULL;
 
 	if (*head == NULL)
