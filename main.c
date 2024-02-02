@@ -6,7 +6,7 @@ stack_t *head = NULL;
  * main - entry point
  * @argc: arguments count
  * @argv: list of arguments
- * Return: always 0
+ * Return: void
  */
 
 int main(int argc, char *arg[])
@@ -16,9 +16,9 @@ int main(int argc, char *arg[])
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
-	open_file(argv[1]);
+	open_file(arg[1]);
 	free_nodes();
-	return;
+	return (0);
 }
 
 /**
